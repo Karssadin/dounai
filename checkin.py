@@ -9,9 +9,6 @@ from bs4 import BeautifulSoup
 
 email = os.environ.get('EMAIL')
 password = os.environ.get('PASSWORD')
-email_password = os.environ.get('ADDRESS_PASSWORD')
-from_address = os.environ.get('FROM_ADDRESS')
-receiver_address = os.environ.get('RECEIVER_ADDRESS')
 
 data = {
     'email': email,
@@ -47,6 +44,10 @@ checkin = requests.post('https://dounai.pro/user/checkin', cookies=cookies,heade
 
 meg = '签到：' + checkin.text.encode().decode("unicode_escape")
 
+
+email_password = os.environ.get('ADDRESS_PASSWORD')
+from_address = os.environ.get('FROM_ADDRESS')
+receiver_address = os.environ.get('RECEIVER_ADDRESS')
 
 # 邮件基本信息
 smtp_server = "smtp.qq.com"
