@@ -42,7 +42,7 @@ checkin = requests.post('https://dounai.pro/user/checkin', cookies=cookies,heade
 
 
 
-meg = '签到：' + checkin.text.encode().decode("unicode_escape")
+meg = 'dounai签到：' + checkin.text.encode().decode("unicode_escape")
 
 
 email_password = os.environ.get('ADDRESS_PASSWORD')
